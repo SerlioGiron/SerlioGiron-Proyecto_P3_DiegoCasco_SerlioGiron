@@ -12,4 +12,6 @@ public:
     Paralelogramo(int a, int b, int h);
     ~Paralelogramo();
     void dibujar();
+    void leer();
+    //string rellenar();
 };

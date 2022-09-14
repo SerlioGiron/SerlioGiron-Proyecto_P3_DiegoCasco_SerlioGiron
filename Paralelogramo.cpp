@@ -50,6 +50,15 @@ string centrar(string cadena, int espacio) {
     return cadena;
 }
 
+string rellenar(string ladoo, int tamano) {
+    for (int i = 0; i < tamano; i++)
+    {
+        ladoo += " ";
+    }
+
+    return ladoo;
+}
+
 void Paralelogramo::dibujar()
 {
     fstream archivo("paralelogramo_02.txt", ios::out | ios::in);
@@ -66,26 +75,16 @@ void Paralelogramo::dibujar()
 
     //--- Figura ---------
 
-    int tamano = 3 - ladoo.length();
-    for (int i = 0; i < tamano; i++)
-    {
-        ladoo += " ";
-    }
+    ladoo = rellenar(ladoo, 3 - ladoo.length());
 
-    int tamano2 = 3 - hhhhh.length();
-    for (int i = 0; i < tamano2; i++)
-    {
-        hhhhh += " ";
-    }
+    hhhhh = rellenar(hhhhh, 3 - hhhhh.length());
 
-    int tamano3 = 3 - bbbbb.length();
-    for (int i = 0; i < tamano3; i++)
-    {
-        bbbbb += " ";
-    }
+    bbbbb = rellenar(bbbbb, 3 - bbbbb.length());
 
     //---- Desarrollo ------------------------------------
 
+    //lad = centrar(lad, 5);
+    
     if (lad.length() == 1)
     {
         lad = " " + lad + " ";
@@ -94,6 +93,8 @@ void Paralelogramo::dibujar()
     {
         lad = " " + lad;
     }
+
+    //hhh = centrar(hhh, 5);
 
     if (hhh.length() == 1)
     {
@@ -117,90 +118,17 @@ void Paralelogramo::dibujar()
 
     int s = a + b;
     string suma = to_string(s);
-    //string temp = "";
-    //string temp2 = "";
-
-    // centra tambien
-
     suma = centrar(suma, 5);
-
-    // int ta = ((6-suma.length())/2);
-
-    // for (int i = 0; i < ta; i++)
-    // {
-    //     temp += " ";
-    // }
-    // for (int i = 0; i < ta - 1; i++)
-    // {
-    //     temp2 += " ";
-    // }
-
-    // if (suma.length() % 2 != 0)
-    // {
-    //     suma = temp + suma + temp;
-    // }
-    // else
-    // {
-    //     suma = temp + suma + temp2;
-    // }
 
 
     int totalpp = s * 2;
     string stotalpp = to_string(totalpp);
-
-    //aqui tambien centra
-
     stotalpp = centrar(stotalpp, 9);
 
-    // int sizetotal = (10 - stotalpp.length())/2;
-
-    // string espacio = "";
-    // string espacio2 = "";
-
-    // for (int i = 0; i < sizetotal; i++)
-    // {
-    //     espacio += " ";
-    // }
-    // for (int i = 0; i < sizetotal-1; i++)
-    // {
-    //     espacio2 += " ";
-    // }
-
-    // if (stotalpp.length() % 2 != 0)
-    // {
-    //     stotalpp = espacio + stotalpp + espacio;
-    // }else{
-    //     stotalpp = espacio + stotalpp + espacio2;
-    // }
 
     int area = b * h;
     string stringarea = to_string(area);
-
-    // centra una cadena
-
     stringarea = centrar(stringarea,7);
-
-    /*int area_cen_num = (8 - stringarea.length()) / 2;
-
-    string espacio = "";
-    string espacio2 = "";
-
-    for (int i = 0; i < area_cen_num; i++)
-    {
-        espacio += " ";
-    }
-    for (int i = 0; i < area_cen_num - 1; i++)
-    {
-        espacio2 += " ";
-    }
-
-    if (stringarea.length() % 2 != 0)
-    {
-        stringarea = espacio + stringarea + espacio;
-    }
-    else {
-        stringarea = espacio + stringarea + espacio2;
-    }*/
 
     string cadena;
     string tc = "total";
