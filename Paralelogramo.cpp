@@ -59,6 +59,19 @@ string rellenar(string ladoo, int tamano) {
     return ladoo;
 }
 
+string centrarV2(string lad) {
+    if (lad.length() == 1)
+    {
+        lad = " " + lad + " ";
+    }
+    else if (lad.length() == 2)
+    {
+        lad = " " + lad;
+    }
+
+    return lad;
+}
+
 void Paralelogramo::dibujar()
 {
     fstream archivo("paralelogramo_02.txt", ios::out | ios::in);
@@ -83,36 +96,38 @@ void Paralelogramo::dibujar()
 
     //---- Desarrollo ------------------------------------
 
-    //lad = centrar(lad, 5);
+    lad = centrarV2(lad);
     
-    if (lad.length() == 1)
+    /*if (lad.length() == 1)
     {
         lad = " " + lad + " ";
     }
     else if (lad.length() == 2)
     {
         lad = " " + lad;
-    }
+    }*/
 
-    //hhh = centrar(hhh, 5);
+    hhh = centrarV2(hhh);
 
-    if (hhh.length() == 1)
+    /*if (hhh.length() == 1)
     {
         hhh = " " + hhh + " ";
     }
     else if (hhh.length() == 2)
     {
         hhh = " " + hhh;
-    }
+    }*/
 
-    if (bbb.length() == 1)
+    bbb = centrarV2(bbb);
+
+    /*if (bbb.length() == 1)
     {
         bbb = " " + bbb + " ";
     }
     else if (bbb.length() == 2)
     {
         bbb = " " + bbb;
-    }
+    }*/
 
     //--------------------------------
 
