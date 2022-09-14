@@ -1,0 +1,4 @@
+﻿  Proyecto_P3_DiegoCasco_SerlioGiron.cpp
+C:\Proyecto_P3_DiegoCasco_SerlioGiron\Funciones.h(112,16): warning C4554: "|": compruebe la prioridad de operador para posibles errores; utilice paréntesis para indicar la prioridad
+C:\Proyecto_P3_DiegoCasco_SerlioGiron\Funciones.h(112,62): warning C4554: "|": compruebe la prioridad de operador para posibles errores; utilice paréntesis para indicar la prioridad
+  Proyecto_P3_DiegoCasco_SerlioGiron.vcxproj -> C:\Proyecto_P3_DiegoCasco_SerlioGiron\x64\Debug\Proyecto_P3_DiegoCasco_SerlioGiron.exe
