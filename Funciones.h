@@ -6,6 +6,7 @@
 #include <string>
 #include <regex>
 #include "Paralelogramo.h"
+#include "Triangulo.h"
 
 using namespace std;
 
@@ -14,12 +15,12 @@ void imprimirerror()
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
     cout << "Uso: Figuras_Planas.exe ACCION [VARIABLES] \n";
-    cout << setw(54) << "Calculos de perímetro y área de Figuras Planas. \n";
+    cout << setw(54) << "Calculos de perï¿½metro y ï¿½rea de Figuras Planas. \n";
     cout << setw(13) << "Donde: \n";
     cout << setw(19) << "ACCION:" << endl;
     cout << setw(25) << "" << left << setw(20) << "ayuda"
         << "|"
-        << " Información sobre el usa del programa." << endl
+        << " Informaciï¿½n sobre el usa del programa." << endl
         << endl;
     cout << setw(25) << "" << left << setw(20) << "triangulo"
         << "|"
@@ -134,6 +135,12 @@ void programa(int argc, char* argv[])
         }
         else if (forma == "triangulo")
         {
+            int primero = atoi(argv[2]);
+            int segundo = atoi(argv[3]);
+            int tercero = atoi(argv[4]);
+            int cuarto = atoi(argv[5]);
+            Triangulo triangle(primero, segundo, tercero, cuarto);
+            triangle.dibujar();
         }
         else
         {

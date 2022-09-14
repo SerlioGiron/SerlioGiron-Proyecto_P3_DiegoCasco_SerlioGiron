@@ -5,13 +5,14 @@ private:
     int a;
     int b;
     int h;
-    int area;
-    int perimetro;
+    // virtual string centrar(string, int);
+    // virtual string rellenar(string, int);
+    // virtual string centrarV2(string);
 public:
     Paralelogramo();
     Paralelogramo(int a, int b, int h);
     ~Paralelogramo();
-    void dibujar();
-    void leer();
+    virtual void dibujar();
+    //void leer();
     //string rellenar();
 };
