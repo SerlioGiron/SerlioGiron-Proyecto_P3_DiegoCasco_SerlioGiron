@@ -130,7 +130,12 @@ void Triangulo::dibujar()
     while (getline(archivo, cadena))
     {
         
+        
         cadena = regex_replace(cadena, perimetro, suma);
+        cadena = regex_replace(cadena, regex_a, cadena_a);
+        cadena = regex_replace(cadena, regex_b, cadena_b);
+        cadena = regex_replace(cadena, regex_h, cadena_h);
+        cadena = regex_replace(cadena, regex_c, cadena_c);
         cout << cadena << endl;
     }
 }
