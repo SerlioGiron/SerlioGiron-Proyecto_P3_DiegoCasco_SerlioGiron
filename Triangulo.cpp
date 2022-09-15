@@ -112,10 +112,13 @@ void Triangulo::dibujar()
     suma = centrarTriangulo(suma, 5);//esto ya esta
 
     int multi = b * h;
+
+    //cout << "multi: " << multi << endl;
     string cadena_multi = to_string(multi);
     cadena_multi = centrarTriangulo(cadena_multi, 8);//esto ya esta
 
     int area = multi/2;
+    //cout << "area: " << area << endl;
     string stringarea = to_string(area);
     stringarea = centrarTriangulo(stringarea, 8);
 
@@ -125,17 +128,21 @@ void Triangulo::dibujar()
     regex regex_b ("\\[b\\]");
     regex regex_c ("\\[c\\]");
     regex regex_h ("\\[h\\]");
+    regex regex_area("\\{\\[\\<t\\>\\]\\}");
     regex perimetro("\\{\\[t\\]\\}");//esta va
+    regex regex_multi("\\(b \\* h\\)");
 
     while (getline(archivo, cadena))
     {
         
         
         cadena = regex_replace(cadena, perimetro, suma);
+        cadena = regex_replace(cadena, regex_area, stringarea);
         cadena = regex_replace(cadena, regex_a, cadena_a);
         cadena = regex_replace(cadena, regex_b, cadena_b);
         cadena = regex_replace(cadena, regex_h, cadena_h);
         cadena = regex_replace(cadena, regex_c, cadena_c);
+        cadena = regex_replace(cadena, regex_multi, cadena_multi);
         cout << cadena << endl;
     }
 }
