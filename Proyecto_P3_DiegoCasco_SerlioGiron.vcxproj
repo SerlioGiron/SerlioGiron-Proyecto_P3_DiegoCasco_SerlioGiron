@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cuadrado.cpp" />
     <ClCompile Include="Paralelogramo.cpp" />
     <ClCompile Include="Proyecto_P3_DiegoCasco_SerlioGiron.cpp" />
     <ClCompile Include="Triangulo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cuadrado.h" />
     <ClInclude Include="Funciones.h" />
     <ClInclude Include="Paralelogramo.h" />
     <ClInclude Include="Triangulo.h" />

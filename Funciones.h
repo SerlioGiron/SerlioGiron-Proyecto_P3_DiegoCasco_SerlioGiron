@@ -7,6 +7,7 @@
 #include <regex>
 #include "Paralelogramo.h"
 #include "Triangulo.h"
+#include "Cuadrado.h"
 
 using namespace std;
 
@@ -19,44 +20,44 @@ void imprimirerror()
     cout << setw(13) << "Donde: \n";
     cout << setw(19) << "ACCION:" << endl;
     cout << setw(25) << "" << left << setw(20) << "ayuda"
-        << "|"
-        << " Informaci�n sobre el usa del programa." << endl
-        << endl;
+         << "|"
+         << " Informaci�n sobre el usa del programa." << endl
+         << endl;
     cout << setw(25) << "" << left << setw(20) << "triangulo"
-        << "|"
-        << " VARIABLES: a b c h" << endl;
+         << "|"
+         << " VARIABLES: a b c h" << endl;
 
     cout << setw(25) << "" << left << setw(20) << "paralelogramo"
-        << "|"
-        << " VARIABLES: a b h" << endl;
+         << "|"
+         << " VARIABLES: a b h" << endl;
 
     cout << setw(25) << "" << left << setw(20) << "rectangulo"
-        << "|"
-        << " VARIABLES: a b" << endl;
+         << "|"
+         << " VARIABLES: a b" << endl;
 
     cout << setw(25) << "" << left << setw(20) << "cuadrado"
-        << "|"
-        << " VARIABLES: a" << endl;
+         << "|"
+         << " VARIABLES: a" << endl;
 
     cout << setw(25) << "" << left << setw(20) << "rombo"
-        << "|"
-        << " VARIABLES: a d D" << endl;
+         << "|"
+         << " VARIABLES: a d D" << endl;
 
     cout << setw(25) << "" << left << setw(20) << "cometa"
-        << "|"
-        << " VARIABLES: a b d D" << endl;
+         << "|"
+         << " VARIABLES: a b d D" << endl;
 
     cout << setw(25) << "" << left << setw(20) << "trapecio"
-        << "|"
-        << " VARIABLES: a b c h B" << endl;
+         << "|"
+         << " VARIABLES: a b c h B" << endl;
 
     cout << setw(25) << "" << left << setw(20) << "circulo"
-        << "|"
-        << " VARIABLES: r" << endl
-        << endl;
+         << "|"
+         << " VARIABLES: r" << endl
+         << endl;
 }
 
-void programa(int argc, char* argv[])
+void programa(int argc, char *argv[])
 {
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
@@ -73,10 +74,13 @@ void programa(int argc, char* argv[])
         }
         else if (forma == "cuadrado")
         {
+            int primero = atoi(argv[2]);
+            Cuadrado square(primero);
+            square.dibujar();
         }
         else
         {
-            // imprimirerror();
+            
         }
 
         break;
@@ -118,7 +122,7 @@ void programa(int argc, char* argv[])
             {
                 Paralelogramo p(primero, segundo, tercero);
                 p.dibujar();
-                //p.~Paralelogramo();
+                // p.~Paralelogramo();
             }
         }
         else
